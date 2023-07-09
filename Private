@@ -200,7 +200,7 @@ local Toggle = Tab:CreateToggle({
  local Tab3 = Window:CreateTab("Misc", 4483362458)
 
  local Button = Tab3:CreateButton({
-    Name = "Free Cam (Press C to activate)",
+    Name = "Free Cam (Press P to activate)",
     Callback = function()
         ToggleKey = Enum.KeyCode.P
 SprintKey = Enum.KeyCode.Tab
