@@ -95,6 +95,13 @@ function GetNearestBandit()
      return NearestBandit
 end
 
+function TpToMob(Char, Bandit)
+    while _G.AutoFarm == true do
+        task.wait(0.01)
+        Char:MoveTo(Bandit.PrimaryPart.Position + Vector3.new(0,9,0))
+    end
+end
+
 local NumberOfHits = 0
 
 function AutoFarm()
@@ -105,10 +112,10 @@ function AutoFarm()
 
     while _G.AutoFarm == true do
         local Bandit = GetNearestBandit()
-	    Char:MoveTo(Bandit.PrimaryPart.Position + Vector3.new(0,9,0))
+        TpToMob(Char, Bandit)
         repeat wait(0.01)
             if _G.AutoFarm == true then
-                Char:MoveTo(Bandit.PrimaryPart.Position + Vector3.new(0,9,0))
+               
                 if NumberOfHits < 4 then
                     NumberOfHits += 1
                     mouse1click()
