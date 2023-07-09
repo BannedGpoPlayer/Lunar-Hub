@@ -81,8 +81,7 @@ function GetNearestBandit()
     local a = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart
  
     for index, value in pairs(workspace.NPCs:GetChildren()) do
-        print(tostring(Mob))
-          if value.Name == tostring(Mob) then
+          if value.Name == "Fishman Karate User" then
              local dist = (value.PrimaryPart.Position - a.Position).Magnitude
  
              if dist < distance then
