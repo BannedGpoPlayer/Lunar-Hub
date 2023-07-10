@@ -101,7 +101,7 @@ function TpToMob(Char, Bandit)
     Tp = game:GetService("RunService").Heartbeat:Connect(function(deltaTime)
         task.wait(0.01)
         Char:MoveTo(Bandit.PrimaryPart.Position + Vector3.new(0,12,0))
-        Char.PrimaryPart.Velocity = 0
+        Char.PrimaryPart.Anchored = true
     end)
 end
 
